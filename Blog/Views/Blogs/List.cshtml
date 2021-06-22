@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "List Blogs";
+
+    Layout = "_Layout";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Blog.ViewModels.BlogsListViewModel
+<h1>@Model.CurrentCategory</h1>
+<h2 class="display-4 text-center mt-5 mb-3"> @Model.CurrentCategory</h2>
+
+@foreach (var blog in Model.Blogss)
+{
+
+    <partial   name="_BlogsL"model="blog" />
+
+    @*<div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <img class="card-img-top" src=" @blog.ImageUrl" alt="Design">
+                <div class="card-body">
+                    <h4 class="card-title">@blog.Title</h4>
+                    <p class="card-text">
+                       @blog.Content
+                    </p>
+                </div>
+                <div class="card-footer py-4">
+                    <a asp-controller="Blogs" asp-action="Details" asp-route-id="@blog.Id" class="btn btn-secondary">More Details &raquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>*@
+
+
+
+
+}
+
+
+

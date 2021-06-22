@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "List Blogs";
+
+    Layout = "_Layout";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Blog.Models.Blogs
+
+<form asp-action="AddBlogs" method="post" class="form-control-sm" role="form">
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Title" class="col-md-2 custom-control-label">
+
+        </label>
+        <div class="col-md-5">
+            <input asp-for="Title" class="form-control" />
+        </div>
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Content" class="col-md-2 custom-control-label">
+
+        </label>
+        <div class="col-md-5">
+            <input asp-for="Content" class="form-control" />
+        </div>
+        <span asp-validation-for="Content" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageUrl" class="col-md-2 custom-control-label">
+
+        </label>
+        <div class="col-md-5">
+            <input asp-for="ImageUrl" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Autors" class="col-md-2 custom-control-label">
+
+        </label>
+        <div class="col-md-5">
+            <input asp-for="Autors" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DateWrite" class="col-md-2 custom-control-label">
+
+        </label>
+        <div class="col-md-5">
+            <input asp-for="DateWrite" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="CategoryId" class="col-md-2 custom-control-label">
+
+        </label>
+        <div class="col-md-5">
+            <input asp-for="CategoryId" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md offset-2 col-md-5">
+            <input type="submit" class="btn btn-primary" value="Send" />
+        </div>
+       
+    </div>
+</form>

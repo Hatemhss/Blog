@@ -1,0 +1,20 @@
+﻿
+@model Blog.Models.Blogs
+@{
+    ViewData["Title"] = "Details Blog";
+
+    Layout = "_Layout";
+}
+
+
+
+<h2>@Model.Title</h2>
+<div>
+    <img class="card-img-top" src=" @Model.ImageUrl" alt="Design">
+   
+    <h3 class="pull-right">@Model.Autors</h3>
+    <h3>
+        <a href="#">@Model.Title</a>
+    </h3>
+    <h4>@Model.Content</h4>
+</div>

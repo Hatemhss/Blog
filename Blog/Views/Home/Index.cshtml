@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "List Blogs";
+
+    Layout = "_Layout";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Blog.ViewModels.HomeviewModel
+<partial name="_Carousel" />
+
+
+    @foreach (var blog in Model.AproveBlogs)
+    {
+        <div>
+        <partial name="_BlogsL" model="blog" />
+            </div>
+    }
+
